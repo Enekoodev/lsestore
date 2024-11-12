@@ -1,7 +1,53 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LSE Store - Tu Tienda de Servicios</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="scripts.js"></script>
+</head>
 <body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages--------</p>
+    <!-- Navbar -->
+    <nav>
+        <div class="logo">LSE Store</div>
+        <ul class="nav-links">
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#productos">Productos</a></li>
+            <li><a href="#carrito">Carrito</a></li>
+            <li><a href="#cuenta">Cuenta</a></li>
+        </ul>
+        <div class="carrito-icon" onclick="toggleCarrito()">
+            🛒<span id="carrito-count">0</span>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="hero">
+        <h1>Bienvenido a LSE Store</h1>
+        <p>Encuentra servicios y productos digitales al mejor precio.</p>
+        <a href="#productos" class="btn-primary">Explorar Productos</a>
+    </section>
+
+    <!-- Productos Section -->
+    <section id="productos" class="productos">
+        <h2>Nuestros Productos</h2>
+        <div class="producto-grid" id="producto-list">
+            <!-- Productos dinámicos aquí -->
+        </div>
+    </section>
+
+    <!-- Carrito Section -->
+    <div id="carrito" class="carrito">
+        <h2>Tu Carrito</h2>
+        <ul id="carrito-list"></ul>
+        <p>Total: $<span id="carrito-total">0.00</span></p>
+        <button onclick="checkout()">Finalizar Compra</button>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 LSE Store - Todos los derechos reservados</p>
+    </footer>
 </body>
 </html>
